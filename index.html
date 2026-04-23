@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOM en Línea | Municipalidad de Doñihue</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="topbar">
+  <div class="container nav">
+    <a href="https://mdonihue.cl/" target="_blank" class="brand">
+      <img src="./img/logo1.png" alt="Municipalidad de Doñihue" class="brand-logo-img">
+    </a>
+
+    <nav class="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#beneficios">Información</a>
+      <a href="#certificados">Certificados</a>
+      <a href="#documentos">Documentos</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+   
+  </div>
+</header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <span class="eyebrow">Dirección de Obras Municipales Doñihue</span>
+        <h1>DOM en Línea</h1>
+        <h2>Trámites más simples, rápidos y seguros</h2>
+        <p>
+         DOM en Línea es la plataforma digital de la Dirección de Obras Municipales que permite a vecinos y contribuyentes gestionar certificados y trámites de manera rápida, segura y sin necesidad de acudir presencialmente.
+Aquí podrás revisar requisitos, documentos necesarios y plazos antes de ingresar al sistema oficial.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-accent btn-lg" href="https://domenlinea.minvu.cl/" target="_blank">
+            Ingresar a DOM en Línea
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-indicators">
+          <div class="indicator-card">
+            <div class="indicator-icon">⏱</div>
+            <div>
+              <strong>Ahorra tiempo</strong>
+              <p>Trámites más rápidos</p>
+            </div>
+          </div>
+
+          <div class="indicator-card">
+            <div class="indicator-icon">💻</div>
+            <div>
+              <strong>100% Online</strong>
+              <p>Sin filas ni traslados</p>
+            </div>
+          </div>
+
+          <div class="indicator-card">
+            <div class="indicator-icon">🛡</div>
+            <div>
+              <strong>Seguro y confiable</strong>
+              <p>Plataforma oficial y segura</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+<section id="video" class="section video-section">
+  <div class="container video-grid">
+    <div class="video-box">
+      <video controls preload="metadata">
+        <source src="img/VideoDOM.mp4" type="video/mp4">
+        Tu navegador no soporta el video.
+      </video>
+    </div>
+
+    <div class="video-info">
+      <span class="section-kicker">Guía ciudadana</span>
+      <h2>Video paso a paso</h2>
+      <p>
+        Revisa este video para conocer el proceso de ingreso a DOM en Línea,
+        los antecedentes que debes preparar y cómo realizar tu solicitud.
+      </p>
+
+      <a class="btn btn-primary" href="https://domenlinea.minvu.cl/" target="_blank">
+        Ir a DOM en Línea
+      </a>
+    </div>
+  </div>
+</section>
+
+  <!-- BENEFICIOS DEL DOM -->
+  <section class="section" id="beneficios">
+    <div class="container cards-3">
+      <article class="info-card">
+        <div class="info-icon purple">🏛</div>
+        <h3>¿Qué es DOM en Línea?</h3>
+        <p>
+          Es la plataforma digital para gestionar certificados y trámites asociados
+          a la Dirección de Obras Municipales.
+        </p>
+       
+      </article>
+
+      <article class="info-card">
+        <div class="info-icon orange">⚙</div>
+        <h3>¿Para qué sirve?</h3>
+        <p>
+          Permite orientar a los usuarios, agilizar procesos y facilitar la solicitud
+          de certificados municipales.
+        </p>
+       
+      </article>
+
+      <article class="info-card">
+        <div class="info-icon blue">🖱</div>
+        <h3>¿Cómo lo uso?</h3>
+        <p>
+          Selecciona el certificado, revisa los requisitos, prepara tus antecedentes
+          y luego accede a la plataforma oficial.
+        </p>
+      
+      </article>
+    </div>
+  </section>
+
+  
+
+  <!-- LISTADO DE CERTIFICADOS -->
+  <section class="section" id="certificados">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">Servicios disponibles</span>
+          <h2>Certificados disponibles</h2>
+        </div>
+        <a class="link-main" href="https://domenlinea.minvu.cl/" target="_blank">Ir a DOM en Línea →</a>
+      </div>
+
+      <div class="accordion" id="certificadosAccordion"></div>
+    </div>
+  </section>
+
+  <!-- DOCUMENTOS  DE APOYO-->
+  <section class="section" id="documentos">
+    <div class="container mini-cards">
+      <article class="mini-card">
+        <div class="mini-icon purple">📘</div>
+        <h3>Trípticos</h3>
+         
+        <p>Espacio para publicar material informativo descargable.</p>
+        <button class="mini-btn purple-btn"><a href="./img/Doc/Pasoapaso.pdf" target="_blank">  Ver tríptico</a></button>
+      </article>
+
+      <article class="mini-card">
+        <div class="mini-icon blue">📋</div>
+        <h3>Paso a paso</h3>
+        <p>Guía simple para orientar al usuario antes de iniciar el trámite.</p>
+        <button class="mini-btn blue-btn"><a  href="#video">  Ver paso a paso</a></button>
+      </article>
+
+      <article class="mini-card">
+        <div class="mini-icon orange">📄</div>
+        <h3>Formatos</h3>
+        <p>Sección para formularios o formatos descargables según el trámite.</p>
+        <button class="mini-btn orange-btn"><a class="link-main" href="https://www.minvu.gob.cl/elementos-tecnicos/formularios/" target="_blank">Formularios  </a></button></button>
+      </article>
+
+      <article class="mini-card">
+        <div class="mini-icon teal">🔐</div>
+        <h3>Recupera Clave Única</h3>
+        <p>Recuerda: todos estos trámites se realizan con tu ClaveÚnica</p>
+        <button class="mini-btn teal-btn"> <a class="link-main" href="https://claveunica.gob.cl/recuperar" target="_blank">Recupera ClaveÚnica </a></button>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container faq-grid">
+      <div class="panel">
+        <div class="section-heading inside">
+          <div>
+            <span class="section-kicker">Ayuda ciudadana</span>
+            <h2>Preguntas frecuentes</h2>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">¿Qué necesito para solicitar un certificado?</button>
+          <div class="faq-answer">
+            Normalmente se solicita rol de avalúo, dirección del predio, croquis de ubicación, Dominio Vidente, Copia Escritura 
+            y otros antecedentes según el certificado.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">¿Los plazos son exactos?</button>
+          <div class="faq-answer">
+            No. Los plazos son referenciales y pueden variar según revisión municipal,
+            complejidad del caso y cantidad de solicitudes.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">¿Dónde ingreso el trámite?</button>
+          <div class="faq-answer">
+            El ingreso se realiza en la plataforma oficial DOM en Línea del MINVU.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">¿Puedo revisar primero los requisitos?</button>
+          <div class="faq-answer">
+            Sí. Esta página está pensada justamente para orientar antes de entrar
+            a la plataforma oficial.
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <span class="section-kicker dark">Acceso directo</span>
+        <h2>Ingresa ahora a DOM en Línea</h2>
+        <p>
+          Cuando ya tengas identificado tu certificado y los antecedentes requeridos,
+          ingresa a la plataforma oficial.
+        </p>
+        <a class="btn btn-primary btn-lg" href="https://domenlinea.minvu.cl/" target="_blank">
+          Acceder a DOM en Línea
+        </a>
+
+        <div class="cta-tags">
+          <span>Rol de avalúo</span>
+          <span>Croquis</span>
+          <span>Documentos digitalizados</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacto">
+    <div class="container footer-grid">
+      <div>
+        <h4>Dirección de Obras</h4>
+        <p>Municipalidad de Doñihue</p>
+         <p>Dirección Av. Estacion #344</p>
+          <p>Telefono:</p>
+          <p>CENTRAL 72-2959202</p>
+      </div>
+      <div>
+        <h4>Plataforma</h4>
+        <p>DOM en Línea MINVU</p>
+      </div>
+      <div>
+        <h4>Acceso</h4>
+        <p>https://domenlinea.minvu.cl/</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
