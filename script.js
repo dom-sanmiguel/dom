@@ -80,20 +80,17 @@ function crearAcordeon() {
           </div>
         </div>
 
-       <div class="accordion-actions">
-
-  <a class="btn btn-primary" href="https://domenlinea.minvu.cl/" target="_blank">
-    Ir a DOM en Línea
-  </a>
-
+      <div class="accordion-actions">
   ${certificado.formulario ? `
     <a class="btn btn-outline" href="${certificado.formulario}" target="_blank">
       Ver formulario
     </a>
   ` : ""}
 
+  <a class="btn btn-primary" href="https://domenlinea.minvu.cl/" target="_blank">
+    Ir a DOM en Línea
+  </a>
 </div>
-      </div>
     `;
 
     const header = item.querySelector(".accordion-header");
