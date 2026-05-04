@@ -1,15 +1,15 @@
 :root {
-  --primary: #2b1847;
-  --primary-2: #382057;
-  --accent: #f58220;
-  --accent-2: #ff9b46;
-  --blue: #2f76ea;
+  --primary:#0f3c68;       /* azul institucional */
+  --primary-2:#0b2f52;     /* azul oscuro */
+  --accent: #2f76ea;        /* azul botón */
+  --accent-2:#5a9cff;
+  --blue:#2f76ea;
   --blue-soft: #eaf2ff;
   --teal: #21b6b6;
-  --bg: #f5f7fb;
+  --bg: #f4f7fb;
   --surface: #ffffff;
   --text: #1f2d3d;
-  --muted: #617086;
+  --muted: #5c6f82;
   --line: #e3e8f0;
   --shadow: 0 12px 30px rgba(24, 33, 61, 0.08);
   --radius: 20px;
@@ -55,7 +55,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(43, 24, 71, 0.96);
+  background:var(--primary-2);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -109,6 +109,7 @@ img {
 }
 
 .btn:hover {
+  background: #1f5fd1;
   transform: translateY(-1px);
 }
 
@@ -118,6 +119,7 @@ img {
 }
 
 .btn-primary {
+  background: #2f76ea;
 padding: 14px 24px;
   font-size: 16px;
 
@@ -137,7 +139,13 @@ padding: 14px 24px;
   align-items: center;
   overflow: hidden;
   background-image:
-    linear-gradient(90deg, rgba(29, 17, 48, 0.82) 0%, rgba(29, 17, 48, 0.68) 35%, rgba(29, 17, 48, 0.48) 55%, rgba(29, 17, 48, 0.38) 100%),
+      linear-gradient(
+      90deg,
+      rgba(15, 60, 104, 0.85) 0%,
+      rgba(15, 60, 104, 0.7) 40%,
+      rgba(15, 60, 104, 0.4) 70%,
+      rgba(15, 60, 104, 0.2) 100%
+    ),
     url("img/hero.png");
   background-size: cover;
   background-position: center 55%;
@@ -749,6 +757,17 @@ padding: 14px 24px;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
 }
+.footer a {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer * {
+  color: #ffffff !important;
+}
+
 
 .footer h4 {
   margin: 0 0 10px;
@@ -854,4 +873,85 @@ padding: 14px 24px;
   background: #0f69b4;
   color: white;
 }
+
+
+.btn-outline {
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--blue);
+  color: #fff;
+}
+.paso-card-final {
+  background: var(--surface);
+  border-radius: var(--radius);
+  border: 1px solid #edf1f7;
+  box-shadow: var(--shadow);
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 24px;
+  align-items: center;
+}
+
+.paso-card-text h2 {
+  margin: 8px 0 12px;
+  color: var(--primary);
+}
+
+.paso-card-text p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.paso-card-img {
+  display: flex;
+  justify-content: center;
+}
+
+.paso-card-img img {
+  width: 100%;
+  max-width: 240px;
+  border-radius: 14px;
+  border: 1px solid #e6edf7;
+  transition: transform 0.2s ease;
+}
+
+.paso-card-img img:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 800px) {
+  .paso-card-final {
+    grid-template-columns: 1fr;
+  }
+
+  .paso-card-img img {
+    max-width: 220px;
+  }
+}
+.link-texto {
+  margin-top: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.link-texto a {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link-texto a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
 }
