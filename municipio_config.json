@@ -1,0 +1,351 @@
+
+
+{
+  "_meta": {
+    "version": "1.0.0",
+    "aplicacion": "DOM en Línea — Portal Municipal de Orientación",
+    "descripcion": "Archivo de configuración estándar para adaptar la plataforma a cualquier municipio del país.",
+    "instrucciones": [
+      "1. Copie este archivo a su municipio y renómbrelo si lo desea.",
+      "2. Complete todos los campos marcados con (*). Los demás son opcionales.",
+      "3. Traduzca el contenido de este JSON al archivo config.js para activarlo en la plataforma.",
+      "4. No es necesario modificar index.html ni script.js."
+    ],
+    "compatibilidad": "DOM en Línea MINVU — plataforma nacional",
+    "generado": "2026"
+  },
+  "municipalidad": {
+    "nombre": "DOÑIHUE",
+    "nombreCompleto": "Ilustre Municipalidad de Doñihue",
+    "region": "DEL LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+    "regionCompleta": "Región del Libertador General Bernardo O'Higgins",
+    "logotipo": "./img/logomuni.png",
+    "heroImagen": "./img/hero.png",
+    "contacto": {
+      "direccion": "Av. Estación #344",
+      "telefono": "72-2959202",
+      "email": "dom@mdonihue.cl",
+      "sitioWeb": "https://mdonihue.cl/"
+    }
+  },
+  "mapa": {
+    "comunaBusqueda": "Doñihue",
+    "regionBusqueda": "Región del Libertador General Bernardo O'Higgins",
+    "paisBusqueda": "Chile",
+    "codigoPais": "cl",
+    "centroMapa": [
+      -34.233333,
+      -70.966667
+    ],
+    "zoomInicial": 14,
+    "zoomBusqueda": 17,
+    "viewboxBusqueda": "-71.0500,-34.1600,-70.8800,-34.3100",
+    "boundedBusqueda": false,
+    "localidadPredeterminada": "Doñihue",
+    "zonaPredeterminada": ""
+  },
+  "certificados": [
+    {
+      "nombre": "Certificado de Número",
+      "plazo": "7 días hábiles",
+      "descripcion": "Acredita el número municipal asignado a una propiedad.",
+      "documentos": [
+        "Rol de avalúo",
+        "Croquis de ubicación",
+        "Dominio Vigente",
+        "Copia Escritura"
+      ],
+      "formulario": "./img/Doc/formulario.pdf"
+    },
+    {
+      "nombre": "Certificado de Informaciones Previas",
+      "plazo": "7 días hábiles",
+      "descripcion": "Entrega información urbanística aplicable a un predio.",
+      "documentos": [
+        "Rol de avalúo",
+        "Croquis",
+        "Poder simple si corresponde",
+        "Dominio Vigente",
+        "Copia Escritura"
+      ],
+      "formulario": "./img/Doc/cip.pdf"
+    },
+    {
+      "nombre": "Certificado de Afectación a Utilidad Pública",
+      "plazo": "7 días hábiles",
+      "descripcion": "Certifica si una propiedad se encuentra afecta a utilidad pública según la planificación vigente.",
+      "documentos": [
+        "Rol de avalúo",
+        "Croquis de ubicación",
+        "Dominio Vigente",
+        "Copia Escritura"
+      ],
+      "formulario": "./img/Doc/cup.pdf"
+    },
+    {
+      "nombre": "Certificado de Vivienda Social",
+      "plazo": "7 días hábiles",
+      "descripcion": "Permite acreditar antecedentes para fines asociados a vivienda social.",
+      "documentos": [
+        "Rol",
+        "Antecedentes de la propiedad",
+        "Dominio Vigente",
+        "Copia Escritura"
+      ],
+      "formulario": "./img/Doc/formulario.pdf"
+    },
+    {
+      "nombre": "Certificado de Zonificación",
+      "plazo": "7 días hábiles",
+      "descripcion": "Informa la zonificación aplicable a un predio.",
+      "documentos": [
+        "Rol",
+        "Dirección",
+        "Croquis",
+        "Dominio Vigente",
+        "Copia Escritura"
+      ],
+      "formulario": "./img/Doc/formulario.pdf"
+    },
+    {
+      "nombre": "Otro",
+      "plazo": "Según revisión",
+      "descripcion": "Corresponde a solicitudes especiales no listadas explícitamente.",
+      "documentos": [
+        "Antecedentes según solicitud"
+      ],
+      "formulario": "./img/Doc/formulario.pdf"
+    }
+  ],
+  "documentos": [
+    {
+      "titulo": "Trípticos",
+      "icono": "📘",
+      "color": "purple",
+      "descripcion": "Espacio para publicar material informativo descargable.",
+      "labelBoton": "Ver tríptico",
+      "url": "./img/Doc/Pasoapaso.pdf",
+      "externo": true
+    },
+    {
+      "titulo": "Paso a paso",
+      "icono": "📋",
+      "color": "blue",
+      "descripcion": "Guía simple para orientar al usuario antes de iniciar el trámite.",
+      "labelBoton": "Ver paso a paso",
+      "url": "./img/pasos.jpg",
+      "externo": true
+    },
+    {
+      "titulo": "Formatos",
+      "icono": "📄",
+      "color": "orange",
+      "descripcion": "Sección para formularios o formatos descargables según el trámite.",
+      "labelBoton": "Formularios MINVU",
+      "url": "https://www.minvu.gob.cl/elementos-tecnicos/formularios/0-certificados-y-otros/",
+      "externo": true
+    },
+    {
+      "titulo": "Recupera Clave Única",
+      "icono": "🔐",
+      "color": "teal",
+      "descripcion": "Recuerda: todos estos trámites se realizan con tu ClaveÚnica",
+      "labelBoton": "Recupera ClaveÚnica",
+      "url": "https://claveunica.gob.cl/recuperar",
+      "externo": true
+    }
+  ],
+  "faq": [
+    {
+      "pregunta": "¿Qué necesito para solicitar un certificado?",
+      "respuesta": "Normalmente se solicita rol de avalúo, dirección del predio, croquis de ubicación, Dominio Vigente, Copia Escritura y otros antecedentes según el certificado."
+    },
+    {
+      "pregunta": "¿Los plazos son exactos?",
+      "respuesta": "No. Los plazos son referenciales y pueden variar según revisión municipal, complejidad del caso y cantidad de solicitudes."
+    },
+    {
+      "pregunta": "¿Dónde ingreso el trámite?",
+      "respuesta": "El ingreso se realiza en la plataforma oficial DOM en Línea del MINVU."
+    },
+    {
+      "pregunta": "¿Puedo revisar primero los requisitos?",
+      "respuesta": "Sí. Esta página está pensada justamente para orientar antes de entrar a la plataforma oficial."
+    }
+  ],
+  "pdf": {
+    "rutaBase": "./img/Doc/cip_base.pdf",
+    "posiciones": {
+      "municipalidadSuperior": {
+        "x": 270,
+        "y": 820,
+        "size": 9,
+        "bold": true,
+        "max": 42
+      },
+      "regionSuperior": {
+        "x": 212,
+        "y": 789,
+        "size": 7,
+        "bold": false,
+        "max": 60
+      },
+      "marcaUrbano": {
+        "x": 209,
+        "y": 754,
+        "size": 13,
+        "bold": true,
+        "max": 1
+      },
+      "marcaRural": {
+        "x": 307,
+        "y": 754,
+        "size": 13,
+        "bold": true,
+        "max": 1
+      },
+      "nombre": {
+        "x": 60,
+        "y": 680,
+        "size": 8,
+        "bold": false,
+        "max": 55
+      },
+      "rut": {
+        "x": 338,
+        "y": 680,
+        "size": 8,
+        "bold": false,
+        "max": 20
+      },
+      "email": {
+        "x": 60,
+        "y": 655,
+        "size": 8,
+        "bold": false,
+        "max": 35
+      },
+      "telefono": {
+        "x": 238,
+        "y": 655,
+        "size": 8,
+        "bold": false,
+        "max": 18
+      },
+      "calle": {
+        "x": 60,
+        "y": 620,
+        "size": 8,
+        "bold": false,
+        "max": 55
+      },
+      "numero": {
+        "x": 356,
+        "y": 620,
+        "size": 8,
+        "bold": false,
+        "max": 12
+      },
+      "depto": {
+        "x": 432,
+        "y": 620,
+        "size": 8,
+        "bold": false,
+        "max": 12
+      },
+      "block": {
+        "x": 512,
+        "y": 620,
+        "size": 8,
+        "bold": false,
+        "max": 12
+      },
+      "manzana": {
+        "x": 60,
+        "y": 595,
+        "size": 8,
+        "bold": false,
+        "max": 12
+      },
+      "lote": {
+        "x": 120,
+        "y": 595,
+        "size": 8,
+        "bold": false,
+        "max": 12
+      },
+      "localidad": {
+        "x": 180,
+        "y": 595,
+        "size": 8,
+        "bold": false,
+        "max": 35
+      },
+      "planoLoteo": {
+        "x": 412,
+        "y": 595,
+        "size": 8,
+        "bold": false,
+        "max": 18
+      },
+      "rolSii": {
+        "x": 512,
+        "y": 585,
+        "size": 8,
+        "bold": false,
+        "max": 18
+      },
+      "mapa": {
+        "x": 55,
+        "y": 305,
+        "width": 529,
+        "height": 259
+      },
+      "coordenadas": {
+        "x": 65,
+        "y": 312,
+        "size": 8,
+        "bold": true,
+        "max": 80
+      },
+      "municipalidadComprobante": {
+        "x": 255,
+        "y": 190,
+        "size": 9,
+        "bold": true,
+        "max": 35
+      },
+      "calleComprobante": {
+        "x": 60,
+        "y": 116,
+        "size": 8,
+        "bold": false,
+        "max": 65
+      },
+      "numeroComprobante": {
+        "x": 500,
+        "y": 116,
+        "size": 8,
+        "bold": false,
+        "max": 15
+      },
+      "consentimientoPdf": {
+        "x": 55,
+        "y": 95,
+        "size": 6.5,
+        "bold": false,
+        "max": 120
+      }
+    }
+  },
+  "consentimiento": {
+    "textoConsentimiento": "Autorizo a {municipalidad} a tratar mis datos personales ({datos}) para la gestión de esta solicitud, conforme a la",
+    "datosPersonales": [
+      "RUT"
+    ],
+    "linkLey": "https://www.bcn.cl/leychile/navegar?idNorma=141599",
+    "textoLinkLey": "Ley N° 19.628 sobre Protección de la Vida Privada",
+    "requerido": true,
+    "registrarEnPdf": true
+  }
+}

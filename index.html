@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DOM en Línea | Municipalidad de Doñihue</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-draw@1.0.4/dist/leaflet.draw.min.css"/>
+
+<link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
 
@@ -19,6 +25,7 @@
       <a href="#inicio">Inicio</a>
       <a href="#beneficios">Información</a>
       <a href="#certificados">Certificados</a>
+      <a href="#preparar-solicitud">Preparar solicitud</a>
       <a href="#documentos">Documentos</a>
       <a href="#faq">Preguntas frecuentes</a>
       <a href="#contacto">Contacto</a>
@@ -90,11 +97,12 @@ Aquí podrás revisar requisitos, documentos necesarios y plazos antes de ingres
     
 
     <div class="video-info">
-      <span class="section-kicker">Guía ciudadana</span>
-      <h2>Video paso a paso</h2>
+      <span class="section-kicker">Transformación digital</span>
+      <h2>Conoce DOM en Línea</h2>
       <p>
-        Revisa este video para conocer el proceso de ingreso a DOM en Línea,
-        los antecedentes que debes preparar y cómo realizar tu solicitud.
+        Video informativo sobre la plataforma DOM en Línea y su funcionamiento,
+  orientado a facilitar el acceso digital a trámites y certificados de la
+  Dirección de Obras Municipales.
       </p>
 
       <a class="btn btn-accent" href="https://domenlinea.minvu.cl/" target="_blank">
@@ -157,36 +165,213 @@ Aquí podrás revisar requisitos, documentos necesarios y plazos antes de ingres
     <div class="accordion" id="certificadosAccordion"></div>
   </div>
 </section>
+ <!-- FORMULARIO DE SOLICITUD -->
+<section class="section" id="preparar-solicitud">
+  <div class="container">
+    <div class="section-heading">
+      <div>
+        <span class="section-kicker">Asistente ciudadano</span>
+        <h2>Preparar solicitud paso a paso</h2>
+      </div>
+    </div>
+
+    <div class="flujo-pasos">
+      <div class="flujo-paso activo" id="pasoUbicacion">1. Seleccionar ubicación</div>
+      <div class="flujo-paso" id="pasoFormulario">2. Completar datos</div>
+      <div class="flujo-paso" id="pasoPdf">3. Descargar PDF</div>
+    </div>
+
+    <div class="solicitud-grid solicitud-grid-flujo">
+      <div class="solicitud-card solicitud-card-principal" id="tarjetaUbicacion">
+        <span class="paso-etiqueta">Paso 1</span>
+        <h3>Ubicación del predio</h3>
+        <p class="form-help">
+          Primero busca la dirección o marca el punto directamente en el mapa. Con esta información se completarán automáticamente la calle, número, localidad y coordenadas del formulario.
+        </p>
+
+        <div class="map-search">
+          <input type="text" id="buscarDireccion" placeholder="Ej: Avenida Estación 344">
+          <button type="button" class="btn btn-accent" id="btnBuscarMapa">
+            Buscar
+          </button>
+        </div>
+
+        <div id="mapaPredio"></div>
+
+        <div class="coordenadas-box">
+          <strong>Coordenadas seleccionadas:</strong>
+          <p id="coordenadasTexto">Aún no se ha seleccionado una ubicación.</p>
+          <p id="estadoUbicacion" class="estado-flujo pendiente">Seleccione una ubicación para continuar con el formulario.</p>
+        </div>
+
+        <div class="limites-box" id="limitesBox">
+          <div class="limites-header">
+            <span class="limites-icon">⬡</span>
+            <strong>Límites del predio</strong>
+            <span class="limites-badge sin-limites" id="limitesBadge">Sin demarcar</span>
+          </div>
+          <p class="limites-ayuda">Use la herramienta <strong>Polígono</strong> o <strong>Rectángulo</strong> de la barra lateral del mapa para demarcar los límites del predio. Puede editar o eliminar el trazado.</p>
+          <p id="limitesTexto" class="limites-info" style="display:none"></p>
+          <button type="button" class="btn btn-outline btn-sm" id="btnLimpiarLimites" style="display:none">
+            Borrar límites
+          </button>
+        </div>
+
+        <input type="hidden" id="limitesPropiedad">
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-outline" id="btnConfirmarUbicacion">
+            Usar esta ubicación y completar datos
+          </button>
+        </div>
+      </div>
+
+      <form id="solicitudForm" class="solicitud-card formulario-solicitud">
+        <span class="paso-etiqueta">Paso 2</span>
+        
+        <h3>Datos del solicitante</h3>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Ej: Juan Pérez González">
+          </div>
+
+          <div class="form-group">
+            <label>RUT</label>
+            <input type="text" id="rut" placeholder="Ej: 12.345.678-9">
+          </div>
+
+          <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" id="email" placeholder="correo@ejemplo.cl">
+          </div>
+
+          <div class="form-group">
+            <label>Teléfono</label>
+            <input type="text" id="telefono" placeholder="Ej:  9 1234 5678">
+          </div>
+        </div>
+
+        <h3>Datos de la propiedad</h3>
+        <p class="form-help aviso-autocompletado">
+          Estos datos se completan desde el mapa. Revísalos y corrige manualmente si la dirección no queda exacta.
+        </p>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Tipo de zona</label>
+            <select id="zona">
+              <option value="">Seleccionar</option>
+              <option value="urbano">Urbano</option>
+              <option value="rural">Rural</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Calle o camino</label>
+            <input type="text" id="calle" placeholder="Se completará desde el mapa">
+          </div>
+
+          <div class="form-group">
+            <label>Número</label>
+            <input type="text" id="numero" placeholder="Se completará si el mapa lo encuentra">
+
+            <label class="check-sn">
+            <input type="checkbox" id="sinNumero">
+                  Predio sin número / S.N.
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label>Departamento</label>
+            <input type="text" id="depto" placeholder="Opcional">
+          </div>
+
+          <div class="form-group">
+            <label>Block</label>
+            <input type="text" id="block" placeholder="Opcional">
+          </div>
+
+          <div class="form-group">
+            <label>Manzana</label>
+            <input type="text" id="manzana" placeholder="Opcional">
+          </div>
+
+          <div class="form-group">
+            <label>Lote</label>
+            <input type="text" id="lote" placeholder="Opcional">
+          </div>
+
+          <div class="form-group">
+            <label>Loteo o localidad</label>
+            <input type="text" id="localidad" placeholder="Se completará desde el mapa">
+          </div>
+
+          <div class="form-group">
+            <label>Plano de loteo N°</label>
+            <input type="text" id="planoLoteo" placeholder="Opcional">
+          </div>
+
+          <div class="form-group">
+            <label>Rol SII</label>
+            <input type="text" id="rolSii" placeholder="Ej: 123-45" required>
+          </div>
+        </div>
+
+        <input type="hidden" id="latitud">
+        <input type="hidden" id="longitud">
+
+        <div id="consentimientoContainer"></div>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-accent" id="btnGuardarDatos" disabled>
+            Validar datos
+          </button>
+
+          <button type="button" class="btn btn-accent" id="btnGenerarPdf" disabled>
+            Descargar formulario PDF
+          </button>
+
+          <button type="button" class="btn btn-outline" id="btnImprimirPdf" disabled>
+            Imprimir formulario
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
   <!-- DOCUMENTOS  DE APOYO-->
   <section class="section" id="documentos">
     <div class="container mini-cards">
       <article class="mini-card">
         <div class="mini-icon purple">📘</div>
         <h3>Trípticos</h3>
-         
         <p>Espacio para publicar material informativo descargable.</p>
-        <button class="mini-btn purple-btn"><a href="./img/Doc/Pasoapaso.pdf" target="_blank">  Ver tríptico</a></button>
+        <a class="mini-btn purple-btn" href="./img/Doc/Pasoapaso.pdf" target="_blank">Ver tríptico</a>
       </article>
 
       <article class="mini-card">
         <div class="mini-icon blue">📋</div>
         <h3>Paso a paso</h3>
         <p>Guía simple para orientar al usuario antes de iniciar el trámite.</p>
-        <button class="mini-btn blue-btn"><a  href="./img/pasos.jpg">  Ver paso a paso</a></button>
+        <a class="mini-btn blue-btn" href="./img/pasos.jpg" target="_blank">Ver paso a paso</a>
       </article>
 
       <article class="mini-card">
         <div class="mini-icon orange">📄</div>
         <h3>Formatos</h3>
         <p>Sección para formularios o formatos descargables según el trámite.</p>
-        <button class="mini-btn orange-btn"><a class="link-main" href="https://www.minvu.gob.cl/elementos-tecnicos/formularios/0-certificados-y-otros/" target="_blank">Formularios  </a></button></button>
+        <a class="mini-btn orange-btn" href="https://www.minvu.gob.cl/elementos-tecnicos/formularios/0-certificados-y-otros/" target="_blank">Formularios MINVU</a>
       </article>
 
       <article class="mini-card">
         <div class="mini-icon teal">🔐</div>
         <h3>Recupera Clave Única</h3>
         <p>Recuerda: todos estos trámites se realizan con tu ClaveÚnica</p>
-        <button class="mini-btn teal-btn"> <a class="link-main" href="https://claveunica.gob.cl/recuperar" target="_blank">Recupera ClaveÚnica </a></button>
+        <a class="mini-btn teal-btn" href="https://claveunica.gob.cl/recuperar" target="_blank">Recupera ClaveÚnica</a>
       </article>
     </div>
   </section>
@@ -280,6 +465,16 @@ Aquí podrás revisar requisitos, documentos necesarios y plazos antes de ingres
     </div>
   </footer>
 
-  <script src="script.js"></script>
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-draw@1.0.4/dist/leaflet.draw.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+
+<script src="script.js"></script>
+
 </body>
 </html>
