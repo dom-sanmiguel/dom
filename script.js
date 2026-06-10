@@ -254,7 +254,7 @@ function iniciarMapaPredio() {
   const imgSatelite = L.tileLayer(
     "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
     {
-      maxNativeZoom: 18,
+      maxNativeZoom: 19,
       maxZoom: 20,
       attribution: "Tiles &copy; Esri — Esri, Maxar, GeoEye, USDA, USGS, AeroGRID, IGN",
       crossOrigin: true
@@ -264,13 +264,13 @@ function iniciarMapaPredio() {
   /* 2. Overlay: trazado de calles y rutas (líneas) */
   const ovTransporte = L.tileLayer(
     "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}",
-    { maxNativeZoom: 18, maxZoom: 20, opacity: 0.9, crossOrigin: true }
+    { maxNativeZoom: 19, maxZoom: 20, opacity: 0.9, crossOrigin: true }
   );
 
   /* 3. Overlay: nombres de calles, localidades y límites */
   const ovEtiquetas = L.tileLayer(
     "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}",
-    { maxNativeZoom: 18, maxZoom: 20, opacity: 1, crossOrigin: true }
+    { maxNativeZoom: 19, maxZoom: 20, opacity: 1, crossOrigin: true }
   );
 
   /* Híbrido = satélite + calles + etiquetas */
@@ -482,17 +482,17 @@ function actualizarInfoLimites(feature) {
 
       L.tileLayer(
         "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-        { maxNativeZoom: 18, maxZoom: 20, crossOrigin: true }
+        { maxNativeZoom: 19, maxZoom: 20, crossOrigin: true }
       ).addTo(miniMapa);
 
       L.tileLayer(
         "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}",
-        { maxNativeZoom: 18, maxZoom: 20, opacity: 0.8, crossOrigin: true }
+        { maxNativeZoom: 19, maxZoom: 20, opacity: 0.8, crossOrigin: true }
       ).addTo(miniMapa);
 
       L.tileLayer(
         "https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}",
-        { maxNativeZoom: 18, maxZoom: 20, crossOrigin: true }
+        { maxNativeZoom: 19, maxZoom: 20, crossOrigin: true }
       ).addTo(miniMapa);
     }
 
