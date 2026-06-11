@@ -534,6 +534,21 @@ function actualizarInfoLimites(feature) {
   }, 150);
 }
 
+function decimalADMS(lat, lng) {
+  function toDMS(decimal, esLat) {
+    const abs     = Math.abs(decimal);
+    const grados  = Math.floor(abs);
+    const minDec  = (abs - grados) * 60;
+    const minutos = Math.floor(minDec);
+    const segundos = ((minDec - minutos) * 60).toFixed(1);
+    const hemisferio = esLat
+      ? (decimal >= 0 ? "N" : "S")
+      : (decimal >= 0 ? "E" : "W");
+    return `${grados}°${minutos}'${segundos}"${hemisferio}`;
+  }
+  return `${toDMS(lat, true)} ${toDMS(lng, false)}`;
+}
+
 function actualizarUbicacionPredio(lat, lng, texto) {
   const latitudInput = document.getElementById("latitud");
   const longitudInput = document.getElementById("longitud");
@@ -545,7 +560,8 @@ function actualizarUbicacionPredio(lat, lng, texto) {
   latitudInput.value = latFixed;
   longitudInput.value = lngFixed;
 
-  coordenadasTexto.textContent = `${texto} | Latitud: ${latFixed} - Longitud: ${lngFixed}`;
+  const dms = decimalADMS(Number(lat), Number(lng));
+  coordenadasTexto.textContent = `${texto} | ${dms}`;
 
   if (marcadorPredio) {
     marcadorPredio.setLatLng([lat, lng]);
@@ -1166,9 +1182,9 @@ async function generarPdfCip(imprimir = false) {
       height: posMapa.height
     });
 
-    /* Coordenadas GPS sobre el croquis */
+    /* Coordenadas GPS sobre el croquis en formato DMS */
     if (latitud && longitud) {
-      const textoCoord = `Lat: ${latitud}  |  Lon: ${longitud}`;
+      const textoCoord = decimalADMS(Number(latitud), Number(longitud));
       escribirCampo("coordenadas", textoCoord, { x: 65, y: 312, size: 8, bold: true, max: 80 }, false);
     }
 
