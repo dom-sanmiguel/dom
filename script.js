@@ -897,6 +897,15 @@ function mostrarEstadoTelefono() {
   return false;
 }
 
+function activarValidacionNombre() {
+  const inputNombre = document.getElementById("nombre");
+  if (!inputNombre) return;
+
+  inputNombre.addEventListener("input", function () {
+    this.value = this.value.replace(/[^a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]/g, "");
+  });
+}
+
 function activarValidacionTelefono() {
   const inputTelefono = document.getElementById("telefono");
 
@@ -1498,6 +1507,7 @@ function iniciarApp() {
 
   iniciarMapaPredio();
   actualizarEstadoFlujo();
+  activarValidacionNombre();
   activarValidacionRut();
   activarValidacionTelefono();
   activarValidacionNumero();
