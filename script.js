@@ -1320,7 +1320,7 @@ function limpiarFormulario() {
   actualizarPaso("pasoUbicacion", "activo");
   actualizarPaso("pasoFormulario", "");
   actualizarPaso("pasoPdf", "");
-  actualizarEstadoUbicacion();
+  actualizarEstadoFlujo();
 }
 
 
@@ -1367,6 +1367,8 @@ function mapearJsonAConfig(json) {
     municipalidadCompleta:   m.nombreCompleto || m.nombre || "",
     region:                  m.region        || "",
     regionCompleta:          m.regionCompleta || m.region || "",
+    heroImagen:              m.heroImagen    || "",
+    logotipo:                m.logotipo      || "",
     contacto:                m.contacto      || {},
 
     /* Mapa */
@@ -1435,10 +1437,39 @@ function inicializarHero() {
         </div>
       </div>`).join("");
   }
+
+  const heroImagen = obtenerConfigDom("heroImagen", "");
+  if (heroImagen) {
+    const seccionHero = document.querySelector(".hero");
+    if (seccionHero) {
+      seccionHero.style.backgroundImage = [
+        "linear-gradient(90deg, rgba(15,60,104,0.85) 0%, rgba(15,60,104,0.7) 40%, rgba(15,60,104,0.4) 70%, rgba(15,60,104,0.2) 100%)",
+        `url("${heroImagen}")`
+      ].join(", ");
+    }
+  }
+}
+
+function inicializarLogo() {
+  const logotipo = obtenerConfigDom("logotipo", "");
+  const nombre   = obtenerConfigDom("municipalidadCompleta", "");
+  const sitioWeb = obtenerConfigDom("contacto", {}).sitioWeb || "";
+
+  const img    = document.querySelector(".brand-logo-img");
+  const enlace = document.querySelector(".brand");
+
+  if (img && logotipo) {
+    img.src = logotipo;
+    if (nombre) img.alt = nombre;
+  }
+  if (enlace && sitioWeb) {
+    enlace.href = sitioWeb;
+  }
 }
 
 function iniciarApp() {
   inicializarHero();
+  inicializarLogo();
   inicializarFormulario();
   crearAcordeon();
 

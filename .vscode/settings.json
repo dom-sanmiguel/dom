@@ -1,0 +1,7 @@
+{
+    "claudeCodeChat.permissions.yoloMode": false,
+    "files.exclude": {
+        ".claude": true,
+        ".vscode": true
+    }
+}
