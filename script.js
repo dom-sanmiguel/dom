@@ -259,7 +259,7 @@ function iniciarMapaPredio() {
 
   /* 1. Solo satélite (base) */
   /* Satélite + etiquetas Google (mejor resolución para Chile) */
-  const capaHibrido = L.tileLayer(
+  L.tileLayer(
     "https://mt{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}",
     {
       subdomains: ["0", "1", "2", "3"],
@@ -267,26 +267,6 @@ function iniciarMapaPredio() {
       maxZoom: 21,
       attribution: "Tiles &copy; Google"
     }
-  );
-
-  /* Mapa de calles OSM (alternativa) */
-  const capaCalles = L.tileLayer(
-    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-    {
-      maxZoom: 19,
-      attribution: "&copy; OpenStreetMap contributors",
-      crossOrigin: true
-    }
-  );
-
-  /* Híbrido por defecto */
-  capaHibrido.addTo(mapaPredio);
-
-  /* Control de capas (esquina superior derecha) */
-  L.control.layers(
-    { "🛰 Satelital + Calles": capaHibrido, "🗺 Solo Calles (OSM)": capaCalles },
-    {},
-    { position: "topright", collapsed: false }
   ).addTo(mapaPredio);
 
   /* ── Traducciones Leaflet.draw al español ───────────────────── */
