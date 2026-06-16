@@ -68,7 +68,7 @@
 
   "mapa": {
    
-    "comunaBusqueda": "Doñihue",    
+    "comunaBusqueda": "Paredones",
     "regionBusqueda": "Región del Libertador General Bernardo O'Higgins",    
     "paisBusqueda": "Chile",
     "codigoPais": "cl",
@@ -167,7 +167,7 @@
       "color": "purple",
       "descripcion": "Espacio para publicar material informativo descargable.",
       "labelBoton": "Ver tríptico",
-      "url": "./img/Doc/Pasoapaso.pdf",
+      "url": "./img/doc/Pasoapaso.pdf",
       "externo": true
     },
     {
