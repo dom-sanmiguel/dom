@@ -186,12 +186,12 @@
 
         <div class="form-grid">
           <div class="form-group">
-            <label>Nombre completo</label>
+            <label>Nombre completo <span class="campo-requerido">*</span></label>
             <input type="text" id="nombre" placeholder="Ej: Juan Pérez González">
           </div>
 
           <div class="form-group">
-            <label>RUT</label>
+            <label>RUT <span class="campo-requerido">*</span></label>
             <input type="text" id="rut" placeholder="Ej: 12.345.678-9">
           </div>
 
@@ -222,12 +222,12 @@
           </div>
 
           <div class="form-group">
-            <label>Calle o camino</label>
+            <label>Calle o camino <span class="campo-requerido">*</span></label>
             <input type="text" id="calle" placeholder="Se completará desde el mapa">
           </div>
 
           <div class="form-group">
-            <label>Número</label>
+            <label>Número <span class="campo-requerido">*</span></label>
             <input type="text" id="numero" placeholder="Se completará si el mapa lo encuentra">
 
             <label class="check-sn">
@@ -267,10 +267,12 @@
           </div>
 
           <div class="form-group">
-            <label>Rol SII</label>
+            <label>Rol SII <span class="campo-requerido">*</span></label>
             <input type="text" id="rolSii" placeholder="Ej: 123-45" required>
           </div>
         </div>
+
+        <p class="leyenda-requerido"><span class="campo-requerido">*</span> Campos obligatorios</p>
 
         <input type="hidden" id="latitud">
         <input type="hidden" id="longitud">

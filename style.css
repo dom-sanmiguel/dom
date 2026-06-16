@@ -1467,3 +1467,15 @@ img {
   border: 2px solid #e2e8f0;
   width: 100%;
 }
+
+.campo-requerido {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.leyenda-requerido {
+  font-size: 0.78rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
