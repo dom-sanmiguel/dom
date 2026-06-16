@@ -1241,6 +1241,14 @@ async function generarPdfCip(imprimir = false) {
       } catch (_) { /* ignorar si el GeoJSON falla */ }
     }
 
+    /* Fecha y hora de generación del formulario */
+    const ahoraGen = new Date();
+    const fechaGen = ahoraGen.toLocaleDateString("es-CL", { day: "2-digit", month: "2-digit", year: "numeric" });
+    const horaGen  = ahoraGen.toLocaleTimeString("es-CL", { hour: "2-digit", minute: "2-digit" });
+    const textoFecha = `Generado: ${fechaGen}  ${horaGen} hrs.`;
+    const posFecha = obtenerPosicionPdf("fechaGeneracionPdf", { x: 400, y: 730, size: 7.5, bold: true, max: 45 });
+    escribir(textoFecha, posFecha.x, posFecha.y, posFecha.size || 7.5, posFecha.bold === true);
+
     /* Registro de consentimiento en el PDF */
     const cfgConsent = obtenerConfigDom("consentimiento", {});
     if (cfgConsent.registrarEnPdf && document.getElementById("consentimientoDatos")?.checked) {
@@ -1252,6 +1260,13 @@ async function generarPdfCip(imprimir = false) {
       const textoConsent = `El solicitante autorizó el tratamiento de sus datos (${datosConsent}) el ${fechaHora} hrs.`;
       const posConsent = obtenerPosicionPdf("consentimientoPdf", { x: 55, y: 95, size: 6.5, bold: false, max: 120 });
       escribir(textoConsent, posConsent.x, posConsent.y, posConsent.size || 6.5, posConsent.bold === true);
+    }
+
+    /* Aviso de documento de preparación */
+    const avisoPrep = cfgConsent.avisoPreparacion;
+    if (avisoPrep) {
+      const posAviso = obtenerPosicionPdf("avisoPreparacionPdf", { x: 55, y: 75, size: 6, bold: true, max: 145 });
+      escribir(avisoPrep, posAviso.x, posAviso.y, posAviso.size || 6, posAviso.bold === true);
     }
 
     const pdfFinal = await pdfDoc.save();

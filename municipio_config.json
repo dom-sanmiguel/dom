@@ -255,7 +255,9 @@
       "municipalidadComprobante": { "x": 255, "y": 190, "size": 9,   "bold": true,  "max": 35  },
       "calleComprobante":         { "x": 60,  "y": 116, "size": 8,   "bold": false, "max": 65  },
       "numeroComprobante":        { "x": 500, "y": 116, "size": 8,   "bold": false, "max": 15  },
-      "consentimientoPdf":        { "x": 55,  "y": 95,  "size": 6.5, "bold": false, "max": 120 }
+      "consentimientoPdf":        { "x": 55,  "y": 95,  "size": 6.5, "bold": false, "max": 120 },
+      "avisoPreparacionPdf":      { "x": 55,  "y": 75,  "size": 6,   "bold": true,  "max": 145 },
+      "fechaGeneracionPdf":       { "x": 400, "y": 730, "size": 7.5, "bold": true,  "max": 45  }
     }
   },
 
@@ -284,12 +286,19 @@
   },
 
   "consentimiento": {
-    "textoConsentimiento": "Autorizo a {municipalidad} a tratar mis datos personales ({datos}) para la gestión de esta solicitud, conforme a la",
-    "datosPersonales": ["RUT"],
+    "textoConsentimiento": "Autorizo a {municipalidad} a tratar mis datos personales ({datos}) con el fin exclusivo de gestionar esta solicitud. Este sitio utiliza servicios externos de geolocalización (OpenStreetMap/Nominatim y Google Maps) que procesan las coordenadas del predio; dichos datos no son almacenados en servidores municipales. Conforme a la",
+    "datosPersonales": [
+      "nombre completo",
+      "RUT",
+      "correo electrónico",
+      "teléfono",
+      "coordenadas GPS del predio",
+      "dirección del predio"
+    ],
     "linkLey": "https://www.bcn.cl/leychile/navegar?idNorma=141599",
-    "textoLinkLey": "Ley N° 19.628 sobre Protección de la Vida Privada",
-    "requerido": true,    
-    "registrarEnPdf": true
-    
+    "textoLinkLey": "Ley N° 19.628 de Protección de Datos Personales y sus modificaciones (Ley N° 21.719, 2024)",
+    "requerido": true,
+    "registrarEnPdf": true,
+    "avisoPreparacion": "PREPARACION — Este PDF no es comprobante de ingreso. Tramite oficial en: domenlinea.minvu.cl. Plazos referenciales sujetos a revision municipal."
   }
 }
