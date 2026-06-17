@@ -289,7 +289,7 @@
     "textoConsentimiento": "Autorizo a {municipalidad} a tratar los siguientes datos personales (Nombre Completo - RUT - Correo Electrónico - Teléfono - Coordenadas GPS del Predio - Dirección del Predio) con el fin exclusivo de gestionar esta solicitud. Este sitio utiliza servicios externos de geolocalización (OpenStreetMap y Google Maps) que procesan las coordenadas del predio; dichos datos no son almacenados en servidores municipales. Conforme a la",
   
     "linkLey": "https://www.bcn.cl/leychile/navegar?idNorma=141599",
-    "textoLinkLey": "Ley N° 19.628 de Protección de Datos Personales y sus modificaciones (Ley N° 21.719, 2024)",
+    "textoLinkLey": "Ley N° 19.628 de Protección de Datos Personales y sus modificaciones (Ley N° 21.719,)",
     "requerido": true,
     "registrarEnPdf": true,
     "avisoPreparacion": "AVISO — Este PDF no es comprobante de ingreso. El trámite oficial debe realizarse en domenlinea.minvu.cl. Los plazos indicados son referenciales y están sujetos a revisión municipal."
