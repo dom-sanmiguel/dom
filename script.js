@@ -1279,7 +1279,8 @@ async function generarPdfCip(imprimir = false) {
       if (ventana) {
         ventana.onload = function () {
           ventana.print();
-          ventana.onafterprint = function () { limpiarFormulario(); };
+          URL.revokeObjectURL(url);
+          setTimeout(limpiarFormulario, 1500);
         };
       }
     } else {
@@ -1289,7 +1290,10 @@ async function generarPdfCip(imprimir = false) {
       document.body.appendChild(enlace);
       enlace.click();
       document.body.removeChild(enlace);
-      setTimeout(limpiarFormulario, 1500);
+      setTimeout(function () {
+        URL.revokeObjectURL(url);
+        limpiarFormulario();
+      }, 1500);
     }
 
   } catch (error) {
@@ -1308,7 +1312,21 @@ function limpiarFormulario() {
   ];
   campos.forEach(function (id) {
     const el = document.getElementById(id);
-    if (el) el.value = "";
+    if (el) {
+      el.value = "";
+      el.style.borderColor = "";
+      el.setCustomValidity("");
+    }
+  });
+
+  /* Campo de búsqueda del mapa */
+  const inputBuscar = document.getElementById("buscarDireccion");
+  if (inputBuscar) inputBuscar.value = "";
+
+  /* Mensajes de validación de RUT y teléfono */
+  ["rutMensaje", "telefonoMensaje"].forEach(function (id) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = "";
   });
 
   /* Select y checkboxes */
@@ -1320,6 +1338,10 @@ function limpiarFormulario() {
 
   const consent = document.getElementById("consentimientoDatos");
   if (consent) consent.checked = false;
+
+  /* Panel de zona detectada */
+  const panelZona = document.getElementById("zonaDetectadaPanel");
+  if (panelZona) panelZona.style.display = "none";
 
   /* Textos de estado */
   const coordTexto = document.getElementById("coordenadasTexto");
