@@ -286,15 +286,8 @@
   },
 
   "consentimiento": {
-    "textoConsentimiento": "Autorizo a {municipalidad} a tratar los siguientes datos personales con el fin exclusivo de gestionar esta solicitud:",
-    "datosPersonales": [
-      "nombre completo",
-      "RUT",
-      "correo electrónico",
-      "teléfono",
-      "coordenadas GPS del predio",
-      "dirección del predio"
-    ],
+    "textoConsentimiento": "Autorizo a {municipalidad} a tratar los siguientes datos personales (Nombre Completo - RUT - Correo Electrónico - Teléfono - Coordenadas GPS del Predio - Dirección del Predio) con el fin exclusivo de gestionar esta solicitud. Este sitio utiliza servicios externos de geolocalización (OpenStreetMap y Google Maps) que procesan las coordenadas del predio; dichos datos no son almacenados en servidores municipales. Conforme a la",
+  
     "linkLey": "https://www.bcn.cl/leychile/navegar?idNorma=141599",
     "textoLinkLey": "Ley N° 19.628 de Protección de Datos Personales y sus modificaciones (Ley N° 21.719, 2024)",
     "requerido": true,

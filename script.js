@@ -1250,7 +1250,7 @@ async function generarPdfCip(imprimir = false) {
       const ahora = new Date();
       const fechaHora = ahora.toLocaleDateString("es-CL") + " " + ahora.toLocaleTimeString("es-CL", { hour: "2-digit", minute: "2-digit" });
       const datosConsent = Array.isArray(cfgConsent.datosPersonales) && cfgConsent.datosPersonales.length
-        ? cfgConsent.datosPersonales.join(", ")
+        ? cfgConsent.datosPersonales.join(" - ")
         : "datos personales";
       const textoConsent = `El solicitante autorizó el tratamiento de sus datos (${datosConsent}) el ${fechaHora} hrs.`;
       const posConsent = obtenerPosicionPdf("consentimientoPdf", { x: 55, y: 95, size: 6.5, bold: false, max: 120 });
@@ -1636,10 +1636,6 @@ function inicializarConsentimiento() {
 
   const municipalidad = obtenerConfigDom("municipalidadCompleta", "la Municipalidad");
 
-  const listaHtml = Array.isArray(cfg.datosPersonales) && cfg.datosPersonales.length
-    ? `<ul class="consent-datos-list">${cfg.datosPersonales.map(d => `<li>${escaparHtml(d)}</li>`).join("")}</ul>`
-    : "";
-
   const texto = cfg.textoConsentimiento
     .replace("{municipalidad}", escaparHtml(municipalidad));
 
@@ -1652,7 +1648,6 @@ function inicializarConsentimiento() {
         <input type="checkbox" id="consentimientoDatos">
         <span>
           ${texto}
-          ${listaHtml}
           <a href="${linkHref}" target="_blank" rel="noopener">${linkTexto}</a>.
         </span>
       </label>
