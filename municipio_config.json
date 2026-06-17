@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "version": "1.2.0",
+    "version": "2.3.0",
     "aplicacion": "DOM en Línea — Portal Municipal de Orientación",
     "descripcion": "Archivo de configuración único para adaptar la plataforma a cualquier municipio del país.",
     "instrucciones": [
@@ -37,8 +37,8 @@
       "direccion": "Av. Estación #344",
       "telefono": "72-2959202",
       "email": "dom@mdonihue.cl",
-      "sitioWeb": "https://mdonihue.cl/",
-      "sitioWeb_info": "URL del sitio oficial del municipio. El logo del encabezado enlazará a esta dirección."
+      "sitioWeb": "https://www.mdonihue.cl"
+     
     }
   },
 
