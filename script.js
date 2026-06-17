@@ -1232,11 +1232,6 @@ async function generarPdfCip(imprimir = false) {
             pagina.drawCircle({ x: p.x, y: p.y, size: 3, color: rojo, opacity: 0.9 });
           }
 
-          /* Nota de deslindes en el pie del formulario */
-          const nVert = anillo.length - 1;
-          const txtDeslinde = `Deslindes demarcados en el croquis (${nVert} vertices). Ver trazado rojo sobre el mapa.`;
-          const posDeslinde = obtenerPosicionPdf("limitesPdf", { x: 55, y: 108, size: 6.5, bold: false, max: 120 });
-          escribir(txtDeslinde, posDeslinde.x, posDeslinde.y, posDeslinde.size || 6.5, false);
         }
       } catch (_) { /* ignorar si el GeoJSON falla */ }
     }

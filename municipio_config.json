@@ -87,7 +87,7 @@
       "_info": "Lista de certificados disponibles. Cada objeto genera una tarjeta expandible en la página.",
       "_campos": "nombre(*), plazo(*), descripcion(*), documentos(*): lista de documentos requeridos, formulario: ruta al PDF del formulario (opcional).",
       "nombre": "Certificado de Número",
-      "plazo": "7 días hábiles",
+      "plazo": "hasta 20 días hábiles",
       "descripcion": "Acredita el número municipal asignado a una propiedad.",
       "documentos": [
         "Rol de avalúo",
@@ -112,7 +112,7 @@
     },
     {
       "nombre": "Certificado de Afectación a Utilidad Pública",
-      "plazo": "7 días hábiles",
+      "plazo": "hasta 20 días hábiles",
       "descripcion": "Certifica si una propiedad se encuentra afecta a utilidad pública según la planificación vigente.",
       "documentos": [
         "Rol de avalúo",
@@ -124,7 +124,7 @@
     },
     {
       "nombre": "Certificado de Vivienda Social",
-      "plazo": "7 días hábiles",
+      "plazo": "hasta 20 días hábiles",
       "descripcion": "Permite acreditar antecedentes para fines asociados a vivienda social.",
       "documentos": [
         "Rol",
@@ -136,7 +136,7 @@
     },
     {
       "nombre": "Certificado de Zonificación",
-      "plazo": "7 días hábiles",
+      "plazo": "hasta 20 días hábiles",
       "descripcion": "Informa la zonificación aplicable a un predio.",
       "documentos": [
         "Rol",
@@ -180,7 +180,7 @@
       "externo": true
     },
     {
-      "titulo": "Formatos",
+      "titulo": "Formularios oficiales",
       "icono": "📄",
       "color": "orange",
       "descripcion": "Sección para formularios o formatos descargables según el trámite.",

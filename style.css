@@ -667,8 +667,9 @@ img {
 /* MINI CARDS */
 .mini-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 360px));
   gap: 18px;
+  justify-content: center;
 }
 
 .mini-card {
