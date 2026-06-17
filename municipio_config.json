@@ -286,7 +286,7 @@
   },
 
   "consentimiento": {
-    "textoConsentimiento": "Autorizo a {municipalidad} a tratar mis datos personales ({datos}) con el fin exclusivo de gestionar esta solicitud. Este sitio utiliza servicios externos de geolocalización (OpenStreetMap/Nominatim y Google Maps) que procesan las coordenadas del predio; dichos datos no son almacenados en servidores municipales. Conforme a la",
+    "textoConsentimiento": "Autorizo a {municipalidad} a tratar mis datos personales ({datos}) con el fin exclusivo de gestionar esta solicitud. Este sitio utiliza servicios externos de geolocalización (OpenStreetMap y Google Maps) que procesan las coordenadas del predio; dichos datos no son almacenados en servidores municipales. Conforme a la",
     "datosPersonales": [
       "nombre completo",
       "RUT",
