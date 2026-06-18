@@ -29,8 +29,8 @@
     "nombreCompleto": "Ilustre Municipalidad de Doñihue",
     "region": "DEL LIBERTADOR GENERAL BERNARDO O'HIGGINS",
     "regionCompleta": "Región del Libertador General Bernardo O'Higgins",
-    "logotipo": "./img/logomuni_2.png",
-    "heroImagen": "./img/hero_2.png",    
+    "logotipo": "./img/logomuni.png",
+    "heroImagen": "./img/hero.png",    
 
     "contacto": {
       "_info": "Datos de contacto que aparecen en el pie de página.",
