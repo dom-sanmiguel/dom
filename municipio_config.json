@@ -77,7 +77,7 @@
     "zoomInicial": 14,    
     "zoomBusqueda": 17, 
     "viewboxBusqueda": "-70.6800,-33.4760,-70.6180,-33.52585",  
-    "boundedBusqueda": true,   
+    "boundedBusqueda": false,   
     "localidadPredeterminada": "San Miguel",
     "zonaPredeterminada": ""
   },
