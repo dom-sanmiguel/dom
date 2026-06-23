@@ -1,9 +1,9 @@
 :root {
-  --primary:#007FA3;
-  --primary-2:#006B8F;
-  --accent:#00A6D6;
-  --accent-2:#35C3E6;
-  --blue:#00A6D6;
+  --primary:#0088A6;
+  --primary-2:#00A5C8;
+  --accent:#00A5C8;
+  --accent-2:#35CBE8;
+  --blue:#00A5C8;
   --blue-soft:#E6F8FC;
   --teal: #21b6b6;
   --bg: #f4f7fb;
@@ -55,9 +55,9 @@ img {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--primary-2);
+  background: #00A5C8;
   backdrop-filter: blur(6px);
-  border-bottom: 4px solid #F4C430;
+  border-bottom: 4px solid #F8D10B;
 }
 
 .nav {
