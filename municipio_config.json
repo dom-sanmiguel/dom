@@ -73,7 +73,7 @@
     "paisBusqueda": "Chile",
     "codigoPais": "cl",
 
-    "centroMapa": [-34.5017, -70.6517],    
+    "centroMapa": [-33.492067, -70.651494],    
     "zoomInicial": 14,    
     "zoomBusqueda": 17, 
     "viewboxBusqueda": "-70.6800,-33.4800,-70.6200,-33.5259",  
