@@ -1,10 +1,10 @@
 :root {
-  --primary:#0f3c68;
-  --primary-2:#0b2f52;
-  --accent: #2f76ea;
-  --accent-2:#5a9cff;
-  --blue:#2f76ea;
-  --blue-soft: #eaf2ff;
+  --primary:#007FA3;
+  --primary-2:#006B8F;
+  --accent:#00A6D6;
+  --accent-2:#35C3E6;
+  --blue:#00A6D6;
+  --blue-soft:#E6F8FC;
   --teal: #21b6b6;
   --bg: #f4f7fb;
   --surface: #ffffff;
@@ -57,7 +57,7 @@ img {
   z-index: 50;
   background: var(--primary-2);
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 4px solid #F4C430;
 }
 
 .nav {
@@ -74,7 +74,7 @@ img {
 }
 
 .brand-logo-img {
-  height: 58px;
+  height: 78px;
   width: auto;
   display: block;
   object-fit: contain;
