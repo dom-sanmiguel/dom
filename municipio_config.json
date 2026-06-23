@@ -76,8 +76,8 @@
     "centroMapa": [-33.492067, -70.651494],    
     "zoomInicial": 14,    
     "zoomBusqueda": 17, 
-    "viewboxBusqueda": "-70.6800,-33.4800,-70.6200,-33.5259",  
-    "boundedBusqueda": false,   
+    "viewboxBusqueda": "-70.6800,-33.4760,-70.6180,-33.52585",  
+    "boundedBusqueda": true,   
     "localidadPredeterminada": "San Miguel",
     "zonaPredeterminada": ""
   },
