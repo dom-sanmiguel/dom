@@ -25,19 +25,19 @@
 
   "municipalidad": {
    
-    "nombre": "DOÑIHUE",
-    "nombreCompleto": "Ilustre Municipalidad de Doñihue",
-    "region": "DEL LIBERTADOR GENERAL BERNARDO O'HIGGINS",
-    "regionCompleta": "Región del Libertador General Bernardo O'Higgins",
+    "nombre": "SAN MIGUEL",
+    "nombreCompleto": "Ilustre Municipalidad de San Miguel",
+    "region": "METROPOLITANA",
+    "regionCompleta": "Región Metropolitana de Santiago",
     "logotipo": "./img/logomuni.png",
     "heroImagen": "./img/hero.png",    
 
     "contacto": {
       "_info": "Datos de contacto que aparecen en el pie de página.",
-      "direccion": "Av. Estación #344",
-      "telefono": "72-2959202",
-      "email": "dom@mdonihue.cl",
-      "sitioWeb": "https://www.mdonihue.cl"
+      "direccion": "Gran Avenida José Miguel Carrera 3418",
+      "telefono": "226789129",
+      "email": "direcciondeobras@sanmiguel.cl",
+      "sitioWeb": "https://www.sanmiguel.cl"
      
     }
   },
@@ -68,17 +68,17 @@
 
   "mapa": {
    
-    "comunaBusqueda": "Doñihue",
-    "regionBusqueda": "Región del Libertador General Bernardo O'Higgins",    
+    "comunaBusqueda": "San Miguel",
+    "regionBusqueda": "Región Metropolitana de Santiago",    
     "paisBusqueda": "Chile",
     "codigoPais": "cl",
 
-    "centroMapa": [-34.233333, -70.966667],    
+    "centroMapa": [-34.5017, -70.6517],    
     "zoomInicial": 14,    
     "zoomBusqueda": 17, 
-    "viewboxBusqueda": "-71.0500,-34.1600,-70.8800,-34.3100",  
+    "viewboxBusqueda": "-70.6800,-33.4800,-70.6200,-33.5259",  
     "boundedBusqueda": false,   
-    "localidadPredeterminada": "Doñihue",
+    "localidadPredeterminada": "San Miguel",
     "zonaPredeterminada": ""
   },
 
